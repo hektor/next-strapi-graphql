@@ -4,7 +4,7 @@ const CATEGORIES_QUERY = gql`
   query Categories {
     categories {
       id
-      Titel
+      Naam
     }
   }
 `;
