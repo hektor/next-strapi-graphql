@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "interessante_links",
+  "info": {
+    "name": "Interessante link"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Titel": {
+      "type": "string",
+      "required": true,
+      "maxLength": 80
+    },
+    "Url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

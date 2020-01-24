@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "documents",
+  "info": {
+    "name": "Document"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Titel": {
+      "type": "string",
+      "required": true
+    },
+    "Document": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "Beschrijving": {
+      "type": "string"
+    },
+    "category": {
+      "via": "documents",
+      "model": "categorie"
+    }
+  }
+}

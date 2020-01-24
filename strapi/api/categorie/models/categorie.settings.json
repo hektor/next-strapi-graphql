@@ -1,0 +1,20 @@
+{
+  "connection": "default",
+  "collectionName": "document-categories",
+  "info": {
+    "name": "Document categorie"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Naam": {
+      "type": "string"
+    },
+    "documents": {
+      "collection": "document",
+      "via": "category"
+    }
+  }
+}
