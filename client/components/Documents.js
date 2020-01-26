@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Query from "../apollo/query";
 import DOCUMENTS_QUERY from "../apollo/queries/documents";
+import { formatDate } from "../utils/date";
 
 export default () => (
   <div className="card-group">
@@ -12,7 +13,7 @@ export default () => (
             <div className="card">
               <span>{Titel}</span>
               <span>{Beschrijving}</span>
-              <span>{updated_at}</span>
+              <span>{formatDate(updated_at)}</span>
             </div>
           </Link>
         ))
