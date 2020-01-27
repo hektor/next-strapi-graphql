@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Link from "next/link";
+import Link from "./Link";
 import Query from "../apollo/query";
 import CATEGORIES_QUERY from "../apollo/queries/categories";
+import Search from "../components/Search";
 
 export default () => {
   const [toggle, setToggle] = useState(false);
@@ -11,6 +12,7 @@ export default () => {
         {toggle ? "close" : "menu"}
       </button>
       <nav>
+        <Search />
         <Link href="/">
           <a>Ouderenraad</a>
         </Link>
@@ -35,7 +37,7 @@ export default () => {
         <Link href="">
           <a>Participatie</a>
         </Link>
-        <Link href="/documents">
+        <Link href="/documents, /document">
           <a>Documenten</a>
         </Link>
       </nav>
@@ -48,6 +50,7 @@ export default () => {
           display: ${toggle ? "flex" : "none"};
           flex-direction: column;
           padding: 0.5rem;
+          padding-right: 0;
           overflow-y: auto;
           background: #fff;
         }
@@ -76,6 +79,11 @@ export default () => {
 
           .toggle {
             display: none;
+          }
+
+          .active {
+            font-weight: bold;
+            border-right: 2px solid;
           }
         }
       `}</style>
