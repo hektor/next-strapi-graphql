@@ -36,8 +36,8 @@ export default () => {
     setDragging(false);
     dragCount.current = 0;
 
-    const payload = new FormData();
-    payload.append("file", e.dataTransfer.files[0]);
+    let payload = new FormData();
+    payload.append("files", e.dataTransfer.files[0]);
 
     fetch("http://localhost:1337/upload", {
       method: "POST",
