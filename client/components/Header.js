@@ -1,38 +1,56 @@
 import React from "react";
+import Link from "next/link";
 import { signout } from "../auth";
 import cookie from "js-cookie";
-import { Search, Phone, LogOut } from "react-feather";
+import { Search, Bell, Phone, LogOut } from "react-feather";
 
 export default () => {
   return (
     <header>
-      <div>
+      <div className="brand">
         <div>logo</div>
       </div>
-      <div>
-        <Search />
-        <input type="text" placeholder="search" />
-      </div>
-      <div>
+      <button>
+        <Bell />
+        Noodnummers
+      </button>
+
+      {cookie.get("token") ? (
+        <button onClick={signout}>
+          <LogOut />
+          Log uit
+        </button>
+      ) : (
         <button>
           <Phone />
-          Noodnummers
+          <Link href="">
+            <a>Contact</a>
+          </Link>
         </button>
-        {cookie.get("token") && (
-          <button onClick={signout}>
-            <LogOut />
-            Log uit
-          </button>
-        )}
-      </div>
+      )}
       <style jsx>{`
         header {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 0.5rem;
           background: #fff;
           border-bottom: 1px solid #eee;
+        }
+
+        .brand {
+          padding: 0.5rem;
+        }
+
+        button {
+          border: 1px solid #eee;
+          border-width: 0px 1px;
+          background: transparent;
+        }
+
+        .brand {
+          display: flex;
+          align-items: center;
+          margin-right: auto;
         }
       `}</style>
     </header>
