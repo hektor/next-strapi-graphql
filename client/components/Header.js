@@ -1,7 +1,7 @@
 import React from "react";
 import { signout } from "../auth";
-import { Search } from "react-feather";
 import cookie from "js-cookie";
+import { Search, Phone, LogOut } from "react-feather";
 
 export default () => {
   return (
@@ -14,8 +14,16 @@ export default () => {
         <input type="text" placeholder="search" />
       </div>
       <div>
-        <button>Noodnummers</button>
-        {cookie.get("token") && <button onClick={signout}>Log uit</button>}
+        <button>
+          <Phone />
+          Noodnummers
+        </button>
+        {cookie.get("token") && (
+          <button onClick={signout}>
+            <LogOut />
+            Log uit
+          </button>
+        )}
       </div>
       <style jsx>{`
         header {
