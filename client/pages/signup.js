@@ -20,7 +20,7 @@ export default () => {
 
   return (
     <Layout>
-      <h1>Registreren</h1>
+      <h1>Account aanmaken</h1>
       <p>{error}</p>
       <p>{`${username} ${email} ${password}`}</p>
       <form>
@@ -41,7 +41,7 @@ export default () => {
           />
         </div>
         <button onClick={e => handleSubmit(e)} type="submit">
-          Maak account
+          Registreer
         </button>
       </form>
     </Layout>

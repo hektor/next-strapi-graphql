@@ -6,6 +6,11 @@ import { formatDate } from "../utils/date";
 
 export default () => (
   <div className="card-group">
+    <div className="card -header">
+      <span>Titel</span>
+      <span>Beschrijving</span>
+      <span>Laatst bewerkt</span>
+    </div>
     <Query query={DOCUMENTS_QUERY} id={null}>
       {({ data: { documents } }) =>
         documents.map(({ id, Titel, Beschrijving, updated_at }) => (
@@ -25,9 +30,15 @@ export default () => (
         flex-direction: column;
       }
 
+      .-header {
+        margin-bottom: 1rem;
+        background: #eee;
+      }
+
       .card {
         display: flex;
-        padding: 0.5rem;
+        align-items: center;
+        padding: 1rem;
         cursor: pointer;
       }
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Layout from "../components/Layout";
+import Link from "next/link";
 import { signin } from "../auth";
+import Layout from "../components/Layout";
 
 export default () => {
   const [user, setUser] = useState({
@@ -39,6 +40,10 @@ export default () => {
         <button onClick={e => handleSubmit(e)} type="submit">
           Log in
         </button>
+        <p>Heb je nog geen account?</p>
+        <Link href="signup">
+          <a>Registreren</a>
+        </Link>
       </form>
     </Layout>
   );

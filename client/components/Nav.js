@@ -35,11 +35,8 @@ export default () => {
         <Link href="">
           <a>Participatie</a>
         </Link>
-        <Link href="signin">
-          <a>Log in</a>
-        </Link>
-        <Link href="signup">
-          <a>Registreren</a>
+        <Link href="/documents">
+          <a>Documenten</a>
         </Link>
       </nav>
       <style jsx>{`
@@ -50,6 +47,7 @@ export default () => {
           height: 50vh;
           display: ${toggle ? "flex" : "none"};
           flex-direction: column;
+          padding: 0.5rem;
           overflow-y: auto;
           background: #fff;
         }
