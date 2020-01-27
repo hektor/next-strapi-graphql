@@ -38,6 +38,7 @@ export default () => (
       .card {
         display: flex;
         align-items: center;
+        border-bottom: 1px solid #eee;
         padding: 1rem;
         cursor: pointer;
       }

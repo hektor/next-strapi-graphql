@@ -49,8 +49,7 @@ export default () => {
           height: 50vh;
           display: ${toggle ? "flex" : "none"};
           flex-direction: column;
-          padding: 0.5rem;
-          padding-right: 0;
+          padding-left: 0.5rem;
           overflow-y: auto;
           background: #fff;
         }

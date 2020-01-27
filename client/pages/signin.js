@@ -25,24 +25,16 @@ export default () => {
       <h1>Inloggen</h1>
       <p>{error}</p>
       <form>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input onChange={e => handleInput(e)} type="email" name="email" />
-        </div>
-        <div>
-          <label htmlFor="password">Wachtwoord</label>
-          <input
-            onChange={e => handleInput(e)}
-            type="password"
-            name="password"
-          />
-        </div>
+        <label htmlFor="email">Email</label>
+        <input onChange={e => handleInput(e)} type="email" name="email" />
+        <label htmlFor="password">Wachtwoord</label>
+        <input onChange={e => handleInput(e)} type="password" name="password" />
         <button onClick={e => handleSubmit(e)} type="submit">
           Log in
         </button>
         <p>Heb je nog geen account?</p>
         <Link href="signup">
-          <a>Registreren</a>
+          <a>Registreer</a>
         </Link>
       </form>
     </Layout>

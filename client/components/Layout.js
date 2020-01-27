@@ -36,7 +36,7 @@ export default ({ children }) => {
           margin: 1rem;
           padding: 1rem;
           background: #fff;
-          border-radius: 1rem;
+          border-radius: var(--border-radius);
         }
 
         @media (min-width: 768px) {

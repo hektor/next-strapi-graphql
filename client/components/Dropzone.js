@@ -69,7 +69,7 @@ export default () => {
           border: solid 40px transparent;
           transition: all 250ms ease-in-out 0s;
           position: relative;
-          border-radius: 1rem;
+          border-radius: var(--border-radius);
         }
       `}</style>
     </div>

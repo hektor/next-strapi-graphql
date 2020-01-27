@@ -5,7 +5,7 @@ export default () => {
   return (
     <div className="search">
       <Search strokeWidth={1} />
-      <input type="text" placeholder="Zoek" />
+      <input type="search" placeholder="Zoek" />
       <style jsx>{`
         .search {
           display: flex;

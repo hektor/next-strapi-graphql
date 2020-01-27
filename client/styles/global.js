@@ -1,12 +1,15 @@
 import css from "styled-jsx/css";
 export default css.global`
-  body {
-    font-family: Inter;
+  :root {
+    --base: 1rem;
+    --font: Inter, Helvetica, Arial;
+    --col: 12;
+    --border-radius: 0.25rem;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
+  body {
+    font-family: var(--font);
+    font-size: var(--base);
   }
 
   button {
@@ -25,5 +28,22 @@ export default css.global`
   button > svg {
     height: 1rem;
     margin-right: 0.5rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 0.5rem;
+  }
+
+  input,
+  select,
+  textarea {
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #eee;
   }
 `;
