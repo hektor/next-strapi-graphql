@@ -1,0 +1,7 @@
+{
+	"scripts": {
+		"install": "npm run install-client && npm run install-server",
+		"install-client": "cd client && yarn",
+		"install-server": "cd strapi && npm i"
+	}
+}
