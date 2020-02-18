@@ -1,12 +1,12 @@
-import React from "react";
-import { Search } from "react-feather";
+import React from 'react'
+import { Search } from 'react-feather'
 
 export default () => {
-  return (
-    <div className="search">
-      <Search strokeWidth={1} />
-      <input type="search" placeholder="Zoek" />
-      <style jsx>{`
+	return (
+		<div className="search">
+			<Search strokeWidth={1} />
+			<input type="search" placeholder="Zoek" />
+			<style jsx>{`
         .search {
           display: flex;
           align-items: center;
@@ -21,6 +21,6 @@ export default () => {
           max-width: 10rem;
         }
       `}</style>
-    </div>
-  );
-};
+		</div>
+	)
+}
