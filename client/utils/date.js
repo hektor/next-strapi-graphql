@@ -29,10 +29,10 @@
 // monthsShort[2] = "mrt";
 
 const human = {
-  weekday: "long",
-  day: "numeric",
-  month: "long"
-};
+	weekday: 'long',
+	day: 'numeric',
+	month: 'long'
+}
 
 export const formatDate = date =>
-  new Date(date).toLocaleDateString("nl-BE", human);
+	new Date(date).toLocaleDateString('nl-BE', human)

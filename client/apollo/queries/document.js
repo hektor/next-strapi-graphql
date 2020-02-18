@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import gql from 'graphql-tag'
 
 const DOCUMENT_QUERY = gql`
   query Documents($id: ID!) {
@@ -9,6 +9,6 @@ const DOCUMENT_QUERY = gql`
       updated_at
     }
   }
-`;
+`
 
-export default DOCUMENT_QUERY;
+export default DOCUMENT_QUERY

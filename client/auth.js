@@ -1,7 +1,7 @@
 import {useEffect} from 'react'
-import Router from 'next/router';
+import Router from 'next/router'
 import nextCookie from 'next-cookies'
-import cookie from 'js-cookie';
+import cookie from 'js-cookie'
 
 export const signin = async ({ email, password }) => {
 	const url = 'http://localhost:1337/auth/local'

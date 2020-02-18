@@ -1,4 +1,4 @@
-import css from "styled-jsx/css";
+import css from 'styled-jsx/css'
 
 export default css.global`
 	:root {
@@ -47,4 +47,4 @@ export default css.global`
 		border-radius: var(--border-radius);
 		border: 1px solid #eee;
 	}
-`;
+`

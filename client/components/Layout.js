@@ -1,6 +1,6 @@
-import globalStyles from "../styles/global";
-import Header from "./Header";
-import Nav from "./Nav";
+import globalStyles from '../styles/global'
+import Header from './Header'
+import Nav from './Nav'
 
 export default ({ children }) => {
 	return (
@@ -46,5 +46,5 @@ export default ({ children }) => {
 				}
 			`}</style>
 		</div>
-	);
-};
+	)
+}
