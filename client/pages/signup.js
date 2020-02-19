@@ -7,9 +7,10 @@ export default () => {
 		username: '',
 		password: ''
 	})
-	const [loading, setLoading] = useState(true)
 
-	const { email, username, password } = user
+	const {email, username, password} = user
+
+	const [loading, setLoading] = useState(false)
 
 	const handleInput = e => {
 		setUser({ ...user, [e.target.name]: e.target.value })
@@ -21,39 +22,32 @@ export default () => {
 	}
 
 	return (
-		<Layout>
+		<Layout wrap>
 			<h1>Account aanmaken</h1>
-			<p>{`${username} ${email} ${password}`}</p>
 			<form>
 				{loading && <div>Loading</div>}
-				<div>
-					<label htmlFor="username">
-						Gebruikersnaam
-					</label>
-					<input
-						onChange={e => handleInput(e)}
-						type="text"
-						name="username"
-					/>
-				</div>
-				<div>
-					<label htmlFor="email">Email</label>
-					<input
-						onChange={e => handleInput(e)}
-						type="email"
-						name="email"
-					/>
-				</div>
-				<div>
-					<label htmlFor="password">
+				<label htmlFor="email">Email</label>
+				<input
+					onChange={e => handleInput(e)}
+					type="email"
+					name="email"
+				/>
+				<label htmlFor="password">
 						Wachtwoord
-					</label>
-					<input
-						onChange={e => handleInput(e)}
-						type="password"
-						name="password"
-					/>
-				</div>
+				</label>
+				<input
+					onChange={e => handleInput(e)}
+					type="password"
+					name="password"
+				/>
+				<label htmlFor="password">
+						Wachtwoord bevestigen
+				</label>
+				<input
+					onChange={e => handleInput(e)}
+					type="password"
+					name="password-confirm"
+				/>
 				<button
 					onClick={e => handleSubmit(e)}
 					type="submit"

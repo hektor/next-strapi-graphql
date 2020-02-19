@@ -19,7 +19,7 @@ export default () => {
 	}
 
 	return (
-		<Layout>
+		<Layout wrap col>
 			<h1>Inloggen</h1>
 			<form>
 				<label htmlFor="email">Email</label>
@@ -37,6 +37,7 @@ export default () => {
 				<button
 					onClick={e => handleSubmit(e)}
 					type="submit"
+					className='-primary-bg'
 				>
 					Log in
 				</button>
