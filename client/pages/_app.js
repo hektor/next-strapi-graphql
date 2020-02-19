@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { ApolloProvider } from '@apollo/react-hooks'
 import withData from '../apollo/apollo'
+import '../styles/react-big-calendar.css'
 
 const App = ({ Component, pageProps, apollo }) => {
 	return (
