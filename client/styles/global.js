@@ -23,25 +23,40 @@ export default css.global`
     height: auto;
     display: block;
   }
-  
+ 
+  .btn,
 	button {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		padding: 0.5rem 1rem 0.5rem 0.5rem;
+    padding: 1rem;
     outline: none;
 		border: none;
-    transition: .1s cubic-bezier(0.2, 0, 0,38, 0.9)
+    font-weight: 500;
+    transition: .1s cubic-bezier(0.2, 0, 0,38, 0.9);
 	}
-
+  
+  .btn,
 	button > svg {
 		height: 1rem;
 		margin-right: 0.5rem;
-	}
+	} 
+
+  .-primary-bg {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .-primary {
+    color: var(--color-primary);
+  }
 
   a {
     outline: none;
+    color: inherit;
+    text-decoration: none;
     transition: .1s cubic-bezier(0.2, 0, 0,38, 0.9)
+    font-weight: 500;
   }
 
 	.-outline {
@@ -52,18 +67,21 @@ export default css.global`
 	form {
 		display: flex;
 		flex-direction: column;
+    max-width: 32rem;
 	}
 
 	label {
-		margin-bottom: 0.5rem;
+    margin: 0.5rem 0;
 	}
 
 	input,
 	select,
 	textarea {
+    box-sizing: border-box;
 		padding: 1rem;
 		border-radius: var(--border-radius);
 		border: 1px solid #eee;
+    margin-bottom: 1rem;
 	}
 
   h1,h2,h3,h4,h5,h6 {
