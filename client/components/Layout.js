@@ -29,7 +29,7 @@ export default ({children, wrap}) => {
 				.page-container {
 					display: flex;
 					flex-direction: column;
-					flex: 1 1 auto;
+          flex-grow: 1;
           position: relative;
           height: 100%;
           overflow: hidden;
@@ -59,12 +59,8 @@ export default ({children, wrap}) => {
           flex: 1;
           display: flex;
           flex-direction: column;
-          margin: 4rem 16rem;
+          margin: 4vh 8vw;
         }
-
-
-
-				}
 			`}</style>
 		</div>
 	)
