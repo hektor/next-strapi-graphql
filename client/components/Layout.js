@@ -2,13 +2,21 @@ import globalStyles from '../styles/global'
 import Header from './Header'
 import Nav from './Nav'
 
-export default ({ children }) => {
+export default ({children, wrap}) => {
 	return (
 		<div className="container">
 			<Header />
 			<div className="page-container">
 				<Nav />
-				<main className="content">{children}</main>
+				<main className="content">
+					{wrap ? (
+						<div className="wrapper">
+							{children}
+						</div>
+					) : 
+						children
+					}
+				</main>
 			</div>
 			<style>{globalStyles}</style>
 			<style jsx>{`
@@ -22,6 +30,9 @@ export default ({ children }) => {
 					display: flex;
 					flex-direction: column;
 					flex: 1 1 auto;
+          position: relative;
+          height: 100%;
+          overflow: hidden;
 				}
 
 				.content {
@@ -43,6 +54,16 @@ export default ({ children }) => {
 					.content {
 						order: 1;
 					}
+
+        .wrapper {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          margin: 4rem 16rem;
+        }
+
+
+
 				}
 			`}</style>
 		</div>
