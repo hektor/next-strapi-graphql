@@ -59,8 +59,12 @@ export default ({children, wrap}) => {
           flex: 1;
           display: flex;
           flex-direction: column;
-          margin: 4rem 8vw;
+          margin: 4rem 16rem;
         }
+
+
+
+				}
 			`}</style>
 		</div>
 	)
