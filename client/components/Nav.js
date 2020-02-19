@@ -57,7 +57,6 @@ export default () => {
 					height: 50vh;
 					transform: translateY(${toggle ? '0' : '50vh'});
 					flex-direction: column;
-					padding-left: 0.8rem;
 					background: #fff;
           transition:  0.15s cubic-bezier(0.4, 0.14, 0.3, 1); 
 				}
@@ -73,7 +72,12 @@ export default () => {
 					align-items: center;
           padding: 1.6rem;
           border-bottom: 1px solid #eee;
+          transition: 11ms cubic-bezier(0.2, 0.2, 0.38, 0.9);
 				}
+
+        a:hover {
+          background: #eee;
+        }
 
 				.toggle {
           display: block;
