@@ -16,6 +16,7 @@ export default () => {
 
         input {
           padding: 0.5rem;
+          margin: 0;
           border: none;
           color: inherit;
           max-width: 10rem;
