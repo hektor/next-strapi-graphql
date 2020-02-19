@@ -95,9 +95,8 @@ export default () => {
 					nav {
 						position: static;
 						width: auto;
-            flex:1;
             transform: none;
-            height: 100vh;
+            height: 100%;
 						display: flex;
 					}
 
