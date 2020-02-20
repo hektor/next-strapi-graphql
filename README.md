@@ -17,8 +17,7 @@ Install dependencies for client
 
 Go to client folder   
 ```cd client```
-Run   
-```yarn```
+Run ```yarn```
 
 Add environment variables
 
@@ -31,6 +30,5 @@ Install dependencies for Strapi
 
 Go to strapi folder  
 ```cd strapi```
-Run  
-```npm i```
+Run ```npm i```
 
