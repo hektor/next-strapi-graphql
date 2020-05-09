@@ -4,8 +4,7 @@
 
 - Next.js
 - Strapi
-- GraphQL
-- JWT authentication
+- GraphQL & JWT auth
 
 # Setup
 
