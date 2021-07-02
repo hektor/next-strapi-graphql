@@ -1,4 +1,7 @@
 import Layout from '../components/Layout'
 
-export default () => <Layout wrap row><h1>Home</h1></Layout>
-
+export default () => (
+  <Layout wrap row>
+    <h1>Home</h1>
+  </Layout>
+)

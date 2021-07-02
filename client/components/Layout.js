@@ -2,24 +2,17 @@ import globalStyles from '../styles/global'
 import Header from './Header'
 import Nav from './Nav'
 
-export default ({children, wrap}) => {
-	return (
-		<div className="container">
-			<Header />
-			<div className="page-container">
-				<Nav />
-				<main className="content">
-					{wrap ? (
-						<div className="wrapper">
-							{children}
-						</div>
-					) : 
-						children
-					}
-				</main>
-			</div>
-			<style>{globalStyles}</style>
-			<style jsx>{`
+export default ({ children, wrap }) => (
+  <div className="container">
+    <Header />
+    <div className="page-container">
+      <Nav />
+      <main className="content">
+        {wrap ? <div className="wrapper">{children}</div> : children}
+      </main>
+    </div>
+    <style>{globalStyles}</style>
+    <style jsx>{`
 				.container {
 					min-height: 100vh;
 					background: #eee;
@@ -62,6 +55,5 @@ export default ({children, wrap}) => {
           margin: 4vh 8vw;
         }
 			`}</style>
-		</div>
-	)
-}
+  </div>
+)

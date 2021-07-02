@@ -3,27 +3,27 @@ import Query from '../apollo/query'
 import DOCUMENTS_QUERY from '../apollo/queries/documents'
 import { formatDate } from '../utils/date'
 
-export default () => (
-	<div className="card-group">
+export const Documents = () => (
+  <div className="card-group">
     <div className="card -header">
       <span>Title</span>
       <span>Description</span>
       <span>Last edited</span>
-		</div>
-		<Query query={DOCUMENTS_QUERY} id={null}>
-      {({data: {documents}}) =>
-        documents.map(({id, Title, Description, updated_at}) => (
-					<Link key={id} href={{ pathname: 'document', query: { id } }}>
+    </div>
+    <Query query={DOCUMENTS_QUERY} id={null}>
+      {({ data: { documents } }) =>
+        documents.map(({ id, Title, Description, updated_at }) => (
+          <Link key={id} href={{ pathname: 'document', query: { id } }}>
             <div className="card">
               <span>{Title}</span>
               <span>{Description}</span>
-							<span>{formatDate(updated_at)}</span>
-						</div>
-					</Link>
-				))
-			}
-		</Query>
-		<style jsx>{`
+              <span>{formatDate(updated_at)}</span>
+            </div>
+          </Link>
+        ))
+      }
+    </Query>
+    <style jsx>{`
       .card-group {
         display: flex;
         flex-direction: column;
@@ -46,5 +46,7 @@ export default () => (
         flex: 1;
       }
     `}</style>
-	</div>
+  </div>
 )
+
+export default Documents

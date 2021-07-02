@@ -8,21 +8,21 @@ import Dropzone from '../components/Dropzone'
 const Documents = () => (
   <Layout>
     <h1>Document</h1>
-		<div className="list-overview">
-			<DocumentsList />
-		</div>
-		<Dropzone />
-		<style jsx>{`
-			.list-overview {
-				flex: 1;
-			}
-		`}</style>
-	</Layout>
+    <div className="list-overview">
+      <DocumentsList />
+    </div>
+    <Dropzone />
+    <style jsx>{`
+      .list-overview {
+        flex: 1;
+      }
+    `}</style>
+  </Layout>
 )
 
-Documents.getInitialProps = async ctx => {
-	const { token } = nextCookie(ctx)
-	return token
+Documents.getInitialProps = async (ctx) => {
+  const { token } = nextCookie(ctx)
+  return token
 }
 
 export default withAuthSync(Documents)

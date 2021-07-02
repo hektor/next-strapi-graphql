@@ -1,7 +1,7 @@
-export default ({toggle, children}) =>
-	<div className={`modal ${toggle ? 'open' : 'closed'}`}>
-		<style>
-			{`
+export const Modal = ({ toggle, children }) => (
+  <div className={`modal ${toggle ? 'open' : 'closed'}`}>
+    <style>
+      {`
         .modal {
           position: absolute;
           z-index: 100;
@@ -20,7 +20,9 @@ export default ({toggle, children}) =>
           transform: translateX(100vw);
         }
       `}
-		</style>
-		{children}
-	</div>
+    </style>
+    {children}
+  </div>
+)
 
+export default Modal
