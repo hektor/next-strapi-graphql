@@ -9,21 +9,21 @@ import cookies from 'js-cookie'
 const GRAPHQL_URL = process.env.GRAPHQL_URL || 'http://localhost:1337/graphql'
 
 const httpLink = createHttpLink({
-	fetch,
-	uri: GRAPHQL_URL
+  fetch,
+  uri: GRAPHQL_URL,
 })
 
 const authLink = setContext((_, { headers }) => ({
-	headers: {
-		...headers,
-		authorization: `Bearer ${cookies.get('token')}` || ''
-	}
+  headers: {
+    ...headers,
+    authorization: `Bearer ${cookies.get('token')}` || '',
+  },
 }))
 
 export default withApollo(
-	({ initialState }) =>
-		new ApolloClient({
-			link: authLink.concat(httpLink),
-			cache: new InMemoryCache().restore(initialState || {})
-		})
+  ({ initialState }) =>
+    new ApolloClient({
+      link: authLink.concat(httpLink),
+      cache: new InMemoryCache().restore(initialState || {}),
+    })
 )
