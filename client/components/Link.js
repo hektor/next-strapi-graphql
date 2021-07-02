@@ -1,7 +1,7 @@
-import Link from 'next/link'
+import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 
-export default ({ children, href }) => {
+export const Link = ({ children, href }) => {
   const router = useRouter()
   const child = React.Children.only(children)
 
@@ -21,8 +21,10 @@ export default ({ children, href }) => {
   if (checkRoutes()) className = `${className} active`.trim()
 
   return (
-    <Link href={href.trim().split(',')[0]}>
+    <NextLink href={href.trim().split(',')[0]}>
       {React.cloneElement(child, { className })}
-    </Link>
+    </NextLink>
   )
 }
+
+export default Link

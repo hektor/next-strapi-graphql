@@ -2,7 +2,7 @@ import globalStyles from '../styles/global'
 import Header from './Header'
 import Nav from './Nav'
 
-export default ({ children, wrap }) => (
+export const Layout = ({ children, wrap }) => (
   <div className="container">
     <Header />
     <div className="page-container">
@@ -57,3 +57,5 @@ export default ({ children, wrap }) => (
 			`}</style>
   </div>
 )
+
+export default Layout
