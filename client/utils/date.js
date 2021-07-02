@@ -26,7 +26,6 @@ export const months = [
 ];
 
 export let monthsShort = months.map(month => month.substr(0, 3));
-monthsShort[2] = "mrt";
 
 const human = {
 	weekday: 'long',
