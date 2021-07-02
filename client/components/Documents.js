@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link'
 import Query from '../apollo/query'
 import DOCUMENTS_QUERY from '../apollo/queries/documents'

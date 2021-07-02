@@ -1,4 +1,3 @@
-import React from 'react'
 import { useRouter } from 'next/router'
 import Query from '../apollo/query'
 import DOCUMENT_QUERY from '../apollo/queries/document'

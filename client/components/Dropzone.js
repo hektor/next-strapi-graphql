@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 import cookie from 'js-cookie'
 import { UploadCloud } from 'react-feather'
 

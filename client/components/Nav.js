@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
 import Search from '../components/Search'
+import { useState } from 'react'
 import NavLink from '../components/NavLink'
 import {Menu, X, Home} from 'react-feather'
 

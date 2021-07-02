@@ -1,4 +1,3 @@
-import React from 'react'
 import { signout } from '../auth'
 import cookie from 'js-cookie'
 

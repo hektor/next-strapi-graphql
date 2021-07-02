@@ -1,4 +1,3 @@
-import React from 'react'
 import nextCookie from 'next-cookies'
 import { withAuthSync } from '../auth'
 
