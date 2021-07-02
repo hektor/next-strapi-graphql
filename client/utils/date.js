@@ -1,36 +1,37 @@
 export const weekDays = [
-  "monday",
-  "tuesday",
-  "wednesday",
-  "thursday",
-  "friday",
-  "saturday",
-  "sunday"
-];
+  'monday',
+  'tuesday',
+  'wednesday',
+  'thursday',
+  'friday',
+  'saturday',
+  'sunday',
+]
 
-export const weekDaysShort = weekDays.map(weekDay => weekDay.substr(0, 2));
+export const weekDaysShort = weekDays.map((weekDay) => weekDay.substr(0, 2))
 
 export const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December"
-];
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+]
 
-export let monthsShort = months.map(month => month.substr(0, 3));
+export let monthsShort = months.map((month) => month.substr(0, 3))
 
 const human = {
-	weekday: 'long',
-	day: 'numeric',
-	month: 'long'
+  weekday: 'long',
+  day: 'numeric',
+  month: 'long',
 }
 
-export const formatDate = date => new Date(date).toLocaleDateString('en-US', human)
+export const formatDate = (date) =>
+  new Date(date).toLocaleDateString('en-US', human)
